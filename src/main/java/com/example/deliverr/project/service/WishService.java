@@ -134,10 +134,6 @@ public class WishService {
         return res;
     }
 
-    private class Inventory{
-        String id;
-
-    }
 
     public static CloseableHttpClient getHttpClient() {
         HttpRequestRetryHandler retryHandler = new HttpRequestRetryHandler() {

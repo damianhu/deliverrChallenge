@@ -47,6 +47,7 @@ public class WishService {
 
     public List<WishItem> getWishProducts() throws IOException, URISyntaxException {
         List<WishItem> res = new ArrayList<>();
+        //get unfulfilled order
         HttpGet httpGet = new HttpGet(getFulfillUrl);
         HttpResponse response = httpClient.execute(httpGet);
         HttpEntity httpEntity = response.getEntity();
@@ -120,7 +121,7 @@ public class WishService {
         httpClient.execute(httpPost);
     }
 
-
+    //transfer wish item to deliverr item
     public List<DeliverrItem> getDeliverrItems(List<WishItem> wishItems){
         List<DeliverrItem> res = new ArrayList<>();
 
